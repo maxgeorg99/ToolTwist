@@ -4,12 +4,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
         body {
-            background-color: #212121; /* Dunkleres Grau für den Hintergrund */
+            background-color: #212121;
         }
         .card {
-            background-color: #757575; /* Helleres Grau für die Karten */
+            background-color: #757575;
+            margin-bottom: 20px; /* Extra space between cards */
         }
         .card .row {
             margin: 0;
@@ -21,8 +24,15 @@
             width: 200px !important;
         }
         h1 {
-            color: #fafafa; /* Weiß mit leichtem Graustich für den Titel */
-            text-shadow: 2px 2px 4px #000000; /* Textschatten für den Titel */
+            color: #fafafa;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        /* Styles for smaller screens */
+        @media screen and (max-width: 600px) {
+            .card-content {
+                font-size: 18px; /* Bigger font size */
+                line-height: 1.6; /* More space between lines */
+            }
         }
     </style>
 </head>
@@ -39,9 +49,9 @@
             </div>
             <div class="col s12 m6">
                 <div class="carousel">
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?kitchen"></a>
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?installation"></a>
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?furniture"></a>
+                    <a class="carousel-item" href="#one!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?kitchen"></a>
+                    <a class="carousel-item" href="#two!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?installation"></a>
+                    <a class="carousel-item" href="#three!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?furniture"></a>
                 </div>
             </div>
         </div>
@@ -51,14 +61,14 @@
             <div class="col s12 m6">
                 <div class="card-content white-text">
                     <span class="card-title">Umzüge</span>
-                    <p>Mit unserer weitreichenden Erfahrung im Bereich Umzüge sorgen wir für einen reibungslosen, stressfreien Ablauf. Unsere erfahrenen Mitarbeiter kümmern sich um das Verpacken, den Transport und das Auspacken Ihrer Güter. Wir legen großen Wert auf Effizienz und Sorgfalt, um sicherzustellen, dass Ihre Güter sicher an ihrem neuen Ort ankommen.</p>
+                    <p>Mit unserer weitreichenden Erfahrung im Bereich Umzüge sorgen wir für einen reibungslosen und stressfreien Umzug. Unsere Experten behandeln Ihr Eigentum mit größter Sorgfalt und stellen sicher, dass alles sicher an seinem neuen Ort ankommt.</p>
                 </div>
             </div>
             <div class="col s12 m6">
                 <div class="carousel">
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?moving"></a>
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?boxes"></a>
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?relocation"></a>
+                    <a class="carousel-item" href="#four!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?moving"></a>
+                    <a class="carousel-item" href="#five!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?packing"></a>
+                    <a class="carousel-item" href="#six!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?boxes"></a>
                 </div>
             </div>
         </div>
@@ -68,19 +78,18 @@
             <div class="col s12 m6">
                 <div class="card-content white-text">
                     <span class="card-title">Badrenovierungen</span>
-                    <p>Wir sind Spezialisten für Badrenovierungen und bringen frischen Wind in Ihr altes Bad. Unser erfahrenes Team stellt sicher, dass alle Arbeiten, von der Planung bis zur Ausführung, präzise und qualitativ hochwertig durchgeführt werden. Wir verwenden nur hochwertige Materialien und legen großen Wert auf Details, um Ihr Badezimmer in eine Wohlfühloase zu verwandeln.</p>
+                    <p>Ob Sie Ihr Badezimmer modernisieren oder eine vollständige Renovierung wünschen, unser Team kann das Projekt von Anfang bis Ende durchführen. Wir sorgen dafür, dass alle Aspekte Ihres Projekts den höchsten Qualitätsstandards entsprechen.</p>
                 </div>
             </div>
             <div class="col s12 m6">
                 <div class="carousel">
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?bathroom"></a>
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?renovation"></a>
-                    <a class="carousel-item" href="#"><img src="https://source.unsplash.com/200x200/?bathroom-design"></a>
+                    <a class="carousel-item" href="#seven!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?bathroom"></a>
+                    <a class="carousel-item" href="#eight!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?renovation"></a>
+                    <a class="carousel-item" href="#nine!"><img class="materialboxed" width="200" src="https://source.unsplash.com/200x200/?plumbing"></a>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <footer class="page-footer grey darken-3">
         <div class="container">
             <div class="row">
@@ -98,11 +107,14 @@
             </div>
         </div>
     </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.carousel');
         var instances = M.Carousel.init(elems, {});
+
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems, {});
     });
 </script>
 </body>
