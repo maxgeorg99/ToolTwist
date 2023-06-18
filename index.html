@@ -122,12 +122,20 @@
         var elems = document.querySelectorAll('.materialboxed');
         var instances = M.Materialbox.init(elems, {
             onOpenStart: function() {
-                // Versteckt alles außer dem vergrößerten Bild
-                document.querySelector('.container').style.display = 'none';
+                // Versteckt alle Karten, außer derjenigen, die das vergrößerte Bild enthält
+                let allCards = document.querySelectorAll('.card');
+                allCards.forEach(function(card) {
+                    if (!card.contains(this.el)) {
+                        card.style.display = 'none';
+                    }
+                }, this);
             },
             onCloseEnd: function() {
-                // Zeigt alles wieder an, wenn das Bild verkleinert wird
-                document.querySelector('.container').style.display = 'block';
+                // Zeigt alle Karten wieder an, wenn das Bild verkleinert wird
+                let allCards = document.querySelectorAll('.card');
+                allCards.forEach(function(card) {
+                    card.style.display = 'block';
+                });
             }
         });
     });
