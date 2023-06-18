@@ -45,6 +45,9 @@
 <body>
 <div class="container">
     <h1 class="center-align">Djaffr Dienstleistungen</h1>
+<!-- Küchenaufbau Card -->
+<div class="card-wrapper">
+    <div class="card">
     <div class="card">
         <div class="row">
             <div class="col s12 m6">
@@ -62,6 +65,9 @@
             </div>
         </div>
     </div>
+        </div>
+<!-- Umzüge Card -->
+<div class="card-wrapper">
     <div class="card">
         <div class="row">
             <div class="col s12 m6">
@@ -79,6 +85,9 @@
             </div>
         </div>
     </div>
+    </div>
+<!-- Badrenovierungen Card -->
+<div class="card-wrapper">
     <div class="card">
         <div class="row">
             <div class="col s12 m6">
@@ -95,6 +104,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer class="page-footer grey darken-3">
         <div class="container">
@@ -123,7 +133,7 @@
         var instances = M.Materialbox.init(elems, {
             onOpenStart: function() {
                 // Versteckt alle Karten, außer derjenigen, die das vergrößerte Bild enthält
-                let allCards = document.querySelectorAll('.card');
+                let allCards = document.querySelectorAll('.card-wrapper');
                 allCards.forEach(function(card) {
                     if (!card.contains(this.el)) {
                         card.style.display = 'none';
@@ -132,7 +142,7 @@
             },
             onCloseEnd: function() {
                 // Zeigt alle Karten wieder an, wenn das Bild verkleinert wird
-                let allCards = document.querySelectorAll('.card');
+                let allCards = document.querySelectorAll('.card-wrapper');
                 allCards.forEach(function(card) {
                     card.style.display = 'block';
                 });
