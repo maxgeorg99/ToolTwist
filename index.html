@@ -120,7 +120,16 @@
         var instances = M.Carousel.init(elems, {});
 
         var elems = document.querySelectorAll('.materialboxed');
-        var instances = M.Materialbox.init(elems, {});
+        var instances = M.Materialbox.init(elems, {
+            onOpenStart: function() {
+                // Versteckt alles außer dem vergrößerten Bild
+                document.querySelector('.container').style.display = 'none';
+            },
+            onCloseEnd: function() {
+                // Zeigt alles wieder an, wenn das Bild verkleinert wird
+                document.querySelector('.container').style.display = 'block';
+            }
+        });
     });
 </script>
 </body>
